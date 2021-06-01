@@ -1,6 +1,7 @@
 import json
 import requests
 from urllib.parse import urlencode, quote
+from flask import jsonify
 
 '''
     Common Parameters
@@ -196,4 +197,4 @@ def get_complete_playlist(auth_header, mode):
     # Group together playlist data (cover, id(used for embed), other info)
     completed_playlist_data = [playlist_cover_data.json(), EMBED_BASE_URL + playlist_id, playlist_data.json()]
     print(playlist_data.json())
-    return completed_playlist_data
+    return jsonify(completed_playlist_data)
