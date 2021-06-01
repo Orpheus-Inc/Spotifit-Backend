@@ -26,7 +26,7 @@ talisman = Talisman(
 )
 
 
-@app.route('/create-playlist/tempo=<tempo>&energy=<energy>', methods=['GET'])
+@app.route('/create-playlist/tempo=<tempo>&energy=<energy>', methods=['GET', 'POST'])
 def playlist_creation(tempo, energy):
     auth_header = request.headers['Authorization']
     auth_header = {"Authorization": auth_header}
