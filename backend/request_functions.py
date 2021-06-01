@@ -2,8 +2,6 @@ import json
 import requests
 from urllib.parse import urlencode, quote
 
-from backend import spotify_user_auth
-
 '''
     Common Parameters
 '''
