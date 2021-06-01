@@ -45,6 +45,7 @@ def get_top_tracks_id(auth_header):
 
 def get_top_artist_id_and_genres(auth_header):
     artist_id_data = get_personalized_data(auth_header, 'artists')
+    print(artist_id_data)
     all_artist_id = []
     all_genres = []
     for i in artist_id_data['items']:
