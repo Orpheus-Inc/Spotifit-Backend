@@ -30,7 +30,9 @@ talisman = Talisman(
 def playlist_creation(tempo, energy):
     auth_header = request.headers['Authorization']
     auth_header = {"Authorization": auth_header}
+    print(auth_header)
     complete_playlist_data = request_functions.get_complete_playlist(auth_header, [energy, tempo])
+    print(complete_playlist_data)
     return complete_playlist_data
 
 
